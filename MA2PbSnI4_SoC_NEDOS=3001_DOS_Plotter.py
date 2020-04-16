@@ -196,7 +196,7 @@ Highest_VBM_List = [Pb_s_VBM,Pb_p_VBM]
 Highest_VBM = max(Highest_VBM_List)
 Lowest_CBM_List = [Pb_s_CBM,Pb_p_CBM]
 Lowest_CBM = min(Lowest_CBM_List)     
-
+'''
 # VBM and CBM Lines
 plt.axvline(x=Pb_s_VBM, color = '#1f77b4', linestyle = '--', linewidth = 1)
 plt.text(Highest_VBM + VBM_text_spacing,Pb_s_VBM_Label, "Pb s VBM", color = '#1f77b4', fontsize=8)
@@ -210,7 +210,7 @@ plt.arrow(Lowest_CBM - CBM_arrow_spacing,Pb_s_VBM_Label+0.04,CBM_arrow_spacing -
 plt.axvline(x=Pb_p_CBM, color = '#ff7f0e', linestyle = '--', linewidth = 1)
 plt.text(Lowest_CBM - CBM_text_spacing,Pb_p_VBM_Label, "Pb p CBM", color = '#ff7f0e', fontsize=8)
 plt.arrow(Lowest_CBM - CBM_arrow_spacing,Pb_p_VBM_Label+0.04,CBM_arrow_spacing - Lowest_CBM + Pb_p_CBM, 0, color = '#ff7f0e', width = 0.0000005, head_width = 0.0000000001, fc='k', ec='k')                          
-                       
+   '''                    
 
 # 0.25
 for i in range(1,5):
@@ -242,7 +242,7 @@ for i in range(1,5):
     Highest_VBM = max(Highest_VBM_List)
     Lowest_CBM_List = [Pb_s_CBM_dict["string"+str(i)],Pb_p_CBM_dict["string"+str(i)],Sn_s_CBM_dict["string"+str(i)],Sn_p_CBM_dict["string"+str(i)]]
     Lowest_CBM = min(Lowest_CBM_List)
-    
+    '''
     # VBM and CBM Lines
     plt.axvline(x=Pb_s_VBM_dict["string"+str(i)], color = '#1f77b4', linestyle = '--', linewidth = 1)
     plt.text(Highest_VBM + VBM_text_spacing,Pb_s_VBM_Label, "Pb s VBM", color = '#1f77b4', fontsize=8)
@@ -270,7 +270,7 @@ for i in range(1,5):
     plt.axvline(x=Sn_p_CBM_dict["string"+str(i)], color = '#d62728', linestyle = '--', linewidth = 1)
     plt.text(Lowest_CBM - CBM_text_spacing,Sn_p_VBM_Label, "Sn p CBM", color = '#d62728', fontsize=8)                    
     plt.arrow(Lowest_CBM - CBM_arrow_spacing,Sn_p_VBM_Label+0.04,CBM_arrow_spacing - Lowest_CBM + Sn_p_CBM_dict["string"+str(i)], 0, color = '#d62728', width = 0.0000005, head_width = 0.0000000001, fc='k', ec='k')             
-
+'''
 # 0.5 
     
 for i in range(5,7):
@@ -299,7 +299,7 @@ for i in range(5,7):
     Highest_VBM = max(Highest_VBM_List)
     Lowest_CBM_List = [Pb_s_CBM_dict["string"+str(i)],Pb_p_CBM_dict["string"+str(i)],Sn_s_CBM_dict["string"+str(i)],Sn_p_CBM_dict["string"+str(i)]]
     Lowest_CBM = min(Lowest_CBM_List)
-    
+    '''
     # VBM and CBM Lines
     plt.axvline(x=Pb_s_VBM_dict["string"+str(i)], color = '#1f77b4', linestyle = '--', linewidth = 1)
     plt.text(Highest_VBM + VBM_text_spacing,Pb_s_VBM_Label, "Pb s VBM", color = '#1f77b4', fontsize=8)
@@ -327,7 +327,7 @@ for i in range(5,7):
     plt.axvline(x=Sn_p_CBM_dict["string"+str(i)], color = '#d62728', linestyle = '--', linewidth = 1)
     plt.text(Lowest_CBM - CBM_text_spacing,Sn_p_VBM_Label, "Sn p CBM", color = '#d62728', fontsize=8)                    
     plt.arrow(Lowest_CBM - CBM_arrow_spacing,Sn_p_VBM_Label+0.04,CBM_arrow_spacing - Lowest_CBM + Sn_p_CBM_dict["string"+str(i)], 0, color = '#d62728', width = 0.0000005, head_width = 0.0000000001, fc='k', ec='k')             
-    
+    '''
 for i in range(9,11):
     plt.subplot2grid((nrows,ncols), (5,i-8))
     plt.title("MA$_2$Pb$_{0.5}$Sn$_{0.5}$I$_4$ DOS 'Columns' Permutation "+str(i-6))
@@ -348,12 +348,13 @@ for i in range(9,11):
     plt.plot(I_dict["string"+str(i)]['Energy'],I_dict["string"+str(i)]['p'], color = '#8c564b')
     plt.fill_between(I_dict["string"+str(i)]['Energy'],I_dict["string"+str(i)]['p'], alpha=0.3, color = '#8c564b')
     plt.legend(('Pb s', 'Pb p', 'Sn s', 'Sn p', 'I s', 'I p'), loc = 2, ncol = 3)
+    
     # Find Highest VBM and Lowest CBM
     Highest_VBM_List = [Pb_s_VBM_dict["string"+str(i)],Pb_p_VBM_dict["string"+str(i)],Sn_s_VBM_dict["string"+str(i)],Sn_p_VBM_dict["string"+str(i)]]
     Highest_VBM = max(Highest_VBM_List)
     Lowest_CBM_List = [Pb_s_CBM_dict["string"+str(i)],Pb_p_CBM_dict["string"+str(i)],Sn_s_CBM_dict["string"+str(i)],Sn_p_CBM_dict["string"+str(i)]]
     Lowest_CBM = min(Lowest_CBM_List)
-    
+    '''
     # VBM and CBM Lines
     plt.axvline(x=Pb_s_VBM_dict["string"+str(i)], color = '#1f77b4', linestyle = '--', linewidth = 1)
     plt.text(Highest_VBM + VBM_text_spacing,Pb_s_VBM_Label, "Pb s VBM", color = '#1f77b4', fontsize=8)
@@ -381,6 +382,7 @@ for i in range(9,11):
     plt.axvline(x=Sn_p_CBM_dict["string"+str(i)], color = '#d62728', linestyle = '--', linewidth = 1)
     plt.text(Lowest_CBM - CBM_text_spacing,Sn_p_VBM_Label, "Sn p CBM", color = '#d62728', fontsize=8)                    
     plt.arrow(Lowest_CBM - CBM_arrow_spacing,Sn_p_VBM_Label+0.04,CBM_arrow_spacing - Lowest_CBM + Sn_p_CBM_dict["string"+str(i)], 0, color = '#d62728', width = 0.0000005, head_width = 0.0000000001, fc='k', ec='k')             
+    '''
     
 for i in range(7,9):
     plt.subplot2grid((nrows,ncols), (6,i-6))
@@ -408,7 +410,7 @@ for i in range(7,9):
     Highest_VBM = max(Highest_VBM_List)
     Lowest_CBM_List = [Pb_s_CBM_dict["string"+str(i)],Pb_p_CBM_dict["string"+str(i)],Sn_s_CBM_dict["string"+str(i)],Sn_p_CBM_dict["string"+str(i)]]
     Lowest_CBM = min(Lowest_CBM_List)
-    
+    '''
     # VBM and CBM Lines
     plt.axvline(x=Pb_s_VBM_dict["string"+str(i)], color = '#1f77b4', linestyle = '--', linewidth = 1)
     plt.text(Highest_VBM + VBM_text_spacing,Pb_s_VBM_Label, "Pb s VBM", color = '#1f77b4', fontsize=8)
@@ -436,7 +438,7 @@ for i in range(7,9):
     plt.axvline(x=Sn_p_CBM_dict["string"+str(i)], color = '#d62728', linestyle = '--', linewidth = 1)
     plt.text(Lowest_CBM - CBM_text_spacing,Sn_p_VBM_Label, "Sn p CBM", color = '#d62728', fontsize=8)                    
     plt.arrow(Lowest_CBM - CBM_arrow_spacing,Sn_p_VBM_Label+0.04,CBM_arrow_spacing - Lowest_CBM + Sn_p_CBM_dict["string"+str(i)], 0, color = '#d62728', width = 0.0000005, head_width = 0.0000000001, fc='k', ec='k')             
-
+'''
 # 0.75
     
 for i in range(11,15):
@@ -463,7 +465,7 @@ for i in range(11,15):
     plt.plot(I_dict["string"+str(i)]['Energy'],I_dict["string"+str(i)]['p'], color = '#8c564b')
     plt.fill_between(I_dict["string"+str(i)]['Energy'],I_dict["string"+str(i)]['p'], alpha=0.3, color = '#8c564b')
     plt.legend(('Pb s', 'Pb p', 'Sn s', 'Sn p', 'I s', 'I p'), loc = 2, ncol = 3)
-
+'''
     # Find Highest VBM and Lowest CBM
     Highest_VBM_List = [Pb_s_VBM_dict["string"+str(i)],Pb_p_VBM_dict["string"+str(i)],Sn_s_VBM_dict["string"+str(i)],Sn_p_VBM_dict["string"+str(i)]]
     Highest_VBM = max(Highest_VBM_List)
@@ -497,7 +499,7 @@ for i in range(11,15):
     plt.axvline(x=Sn_p_CBM_dict["string"+str(i)], color = '#d62728', linestyle = '--', linewidth = 1)
     plt.text(Lowest_CBM - CBM_text_spacing,Sn_p_VBM_Label, "Sn p CBM", color = '#d62728', fontsize=8)                    
     plt.arrow(Lowest_CBM - CBM_arrow_spacing,Sn_p_VBM_Label+0.04,CBM_arrow_spacing - Lowest_CBM + Sn_p_CBM_dict["string"+str(i)], 0, color = '#d62728', width = 0.0000005, head_width = 0.0000000001, fc='k', ec='k')             
-
+'''
     
 # Sn 
 plt.subplot2grid((nrows,ncols), (1,2))
@@ -516,7 +518,7 @@ plt.plot(I2['Energy'],I2['p'], color = '#8c564b')
 plt.fill_between(I2['Energy'],I2['p'], alpha=0.3, color = '#8c564b')  
 plt.legend(('Sn s', 'Sn p', 'I s', 'I p'), loc = 2, ncol = 2)
 
-
+'''
 # Find Highest VBM and Lowest CBM
 Highest_VBM_List = [Sn_s_VBM,Sn_p_VBM]
 Highest_VBM = max(Highest_VBM_List)
@@ -536,8 +538,8 @@ plt.arrow(Lowest_CBM - CBM_arrow_spacing,Sn_s_VBM_Label+0.04,CBM_arrow_spacing -
 plt.axvline(x=Sn_p_CBM, color = '#d62728', linestyle = '--', linewidth = 1)
 plt.text(Lowest_CBM - CBM_text_spacing,Sn_p_VBM_Label, "Sn p CBM", color = '#d62728', fontsize=8)
 plt.arrow(Lowest_CBM - CBM_arrow_spacing,Sn_p_VBM_Label+0.04,CBM_arrow_spacing - Lowest_CBM + Sn_p_CBM, 0, color = '#d62728', width = 0.0000005, head_width = 0.0000000001, fc='k', ec='k')                          
- 
+ '''
  
 
 plt.tight_layout(pad=1)
-plt.savefig('MA2PbSnI4__SoC_DOS_VBM_CBM_Comparison.pdf')
+plt.savefig('MA2PbSnI4__SoC_DOS_VBM_CBM_Comparison_No_Labels.pdf')
