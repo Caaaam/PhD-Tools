@@ -1,5 +1,4 @@
 import sys
-import chart_studio.plotly as py
 import plotly.graph_objects as go
 import plotly as plty
 import plotly.express as px
@@ -8,11 +7,11 @@ import numpy as np
 
 # Tolerance Factor Prediction for 2D Perovskites Pb/Sn/Ge Mixes
 # From http://abulafia.mt.ic.ac.uk/shannon/ptable.php and https://pubs.acs.org/doi/pdf/10.1021/acs.chemmater.9b04472 https://pubs.rsc.org/en/content/articlepdf/2016/sc/c5sc04845a
+# http://www.rsc.org/suppdata/sc/c4/c4sc02211d/c4sc02211d1.pdf << A Site Radii 
 
 Ra_list = {
-        'PEA' : 4,
-        'BA' : 3,
-        'EA' : 2.74, 
+        'PEA' : 5.26, # Estimate from Tom
+        'BA' : 3.91, # Estimated Based on MA + (EA-MA)*3 
         'FA' : 2.53, 
         'MA' : 2.16,
         'Cs' : 1.81}
